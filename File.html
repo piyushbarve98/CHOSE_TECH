@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Neuton:ital@1&display=swap" rel="stylesheet">
+<style>
+body{
+font-family: 'Neuton', serif;
+font-size: 120%;
+}
+.container{
+border: 2px solid Tomato;
+padding: 20px;
+padding-top: 10px;
+background-image: url("https://cdn.dribbble.com/users/110018/screenshots/1327130/5-seamless-icon-patterns-800x600.jpg");
+}
+h2{
+padding:5px;
+margin-left: 175px;
+margin-right: 208px;
+border-radius: 10px;
+color: white;
+
+}
+#demo{
+background-color:Tomato;
+color: white;
+padding:15px;
+border-radius: 10px;
+font-size:18px;
+
+}
+p{color: #FA8072;}
+#demo:hover{
+background-color: white;
+border: 2px solid Tomato;
+color: Tomato;
+}
+.btn1{
+padding: 12px 30px ;
+background-color: #f44336;
+font-size: 22px;
+color: white;
+border-radius: 4px;
+cursor: pointer;
+font-family: 'Neuton', serif;
+border: 2px solid Black;
+
+}
+.btn1:hover{
+background-color:  Tomato;
+color: white;
+border: none;
+}
+</style>
+</head>
+<body>
+<div class='container'>
+<h2><u>Random Tech Game</u></h2>
+
+<p>Click On Button To Know The Technology You Should Learn(Random)<p>
+
+<button class='btn1' onclick="document.getElementById('demo').innerHTML= 'You should learn ' + Array[Random(0,10)]">Click!!</button>
+<script>
+Array=['Python','JAVA','JAVASCRIPT','Machine Learning','C or C++','Database Management','PHP','Web Development','Data Science','Android Development']
+function Random(min,max){
+return Math.floor(Math.random() * (max-min)) + min;
+
+}
+</script>
+<p id="demo">Code Everyday Buddy</p>
+</div>
+</body>
+</html>
